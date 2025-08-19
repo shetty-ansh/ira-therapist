@@ -1,0 +1,28 @@
+{
+  "name": "iraapp2",
+  "version": "1.0.0",
+  "description": "Virtual Assistant",
+  "keywords": [
+    "Gemini",
+    "API"
+  ],
+  "license": "ISC",
+  "author": "Ansh",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon /index.js"
+  },
+  "dependencies": {
+    "@elevenlabs/elevenlabs-js": "^2.10.0",
+    "@google/genai": "^1.14.0",
+    "@huggingface/inference": "^4.7.1",
+    "dotenv": "^17.2.1",
+    "express": "^5.1.0",
+    "mongoose": "^8.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
+}
