@@ -49,16 +49,64 @@ const getSpeech = async (text) => {
       throw new Error('Text is required for speech generation');
     }
     
+    console.log('Generating speech for text:', text.substring(0, 100) + '...');
+    
     const audio = await elevenlabs.textToSpeech.convert('JBFqnCBsd6RMkjVDRZzb', {
       text: text,
       modelId: 'eleven_multilingual_v2',
       outputFormat: 'mp3_44100_128',
     });
     
-    return audio;
+    console.log('ElevenLabs response type:', typeof audio);
+    console.log('ElevenLabs response:', audio);
+    
+    // Convert the audio to a proper Buffer
+    let audioBuffer;
+
+    // Handle Web ReadableStream (shown in logs)
+    if (audio && typeof audio.getReader === 'function') {
+      console.log('Handling Web ReadableStream from ElevenLabs');
+      const reader = audio.getReader();
+      const chunks = [];
+      while (true) {
+        const { value, done } = await reader.read();
+        if (done) break;
+        if (value) chunks.push(Buffer.from(value));
+      }
+      audioBuffer = Buffer.concat(chunks);
+      console.log('Concatenated ReadableStream to Buffer, length:', audioBuffer.length);
+    } else if (audio instanceof ArrayBuffer) {
+      audioBuffer = Buffer.from(audio);
+      console.log('Converted ArrayBuffer to Buffer, length:', audioBuffer.length);
+    } else if (audio instanceof Buffer) {
+      audioBuffer = audio;
+      console.log('Audio is already a Buffer, length:', audioBuffer.length);
+    } else if (audio instanceof Uint8Array) {
+      audioBuffer = Buffer.from(audio);
+      console.log('Converted Uint8Array to Buffer, length:', audioBuffer.length);
+    } else if (audio && typeof audio === 'object' && audio.data) {
+      // Handle case where ElevenLabs returns { data: ArrayBuffer | Uint8Array }
+      if (audio.data instanceof ArrayBuffer) {
+        audioBuffer = Buffer.from(audio.data);
+        console.log('Extracted data(ArrayBuffer) to Buffer, length:', audioBuffer.length);
+      } else {
+        audioBuffer = Buffer.from(audio.data);
+        console.log('Extracted data to Buffer, length:', audioBuffer.length);
+      }
+    } else {
+      // Try to convert whatever we got
+      audioBuffer = Buffer.from(audio);
+      console.log('Converted unknown type to Buffer, length:', audioBuffer.length);
+    }
+    
+    if (!audioBuffer || audioBuffer.length === 0) {
+      throw new Error('Failed to create valid audio buffer');
+    }
+    
+    return audioBuffer;
   } catch (error) {
     console.error('Error getting speech:', error);
-    throw new Error('Failed to generate speech');
+    throw new Error(`Failed to generate speech: ${error.message}`);
   }
 };
 
