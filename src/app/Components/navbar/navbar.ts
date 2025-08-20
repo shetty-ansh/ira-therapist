@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.html',
-  styleUrl: './app.css',
+  selector: 'app-navbar',
+  templateUrl: './navbar.html',
+  styleUrl: './navbar.css',
   standalone: false
 })
-export class App {
+export class Navbar {
   title = 'Ira - Virtual Assistant';
 }

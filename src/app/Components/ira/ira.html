@@ -1,0 +1,74 @@
+<div id="main-container">
+    <div class="ira-character">
+  <div id="ira-avatar"></div>
+</div>
+
+    
+<div class="chat-container">
+  <div class="chat-header">
+    <!-- <h2>Chat with Ira</h2> -->
+    <button class="clear-btn" (click)="clearMessages()"><span class="material-symbols-outlined">
+ink_eraser
+</span></button>
+  </div>
+
+  <div class="chat-box">
+    <div class="messages" #messageContainer>
+      <div *ngFor="let msg of messages" 
+           class="message" 
+           [ngClass]="{'user-message': msg.sender === 'You', 'ira-message': msg.sender === 'Ira'}">
+        <div class="message-content">
+          <span class="sender">{{ msg.sender }}</span>
+          <p class="text">{{ msg.text }}</p>
+          <span class="timestamp">{{ msg.timestamp | date:'shortTime' }}</span>
+        </div>
+      </div>
+      
+      <!-- Loading indicator -->
+      <div *ngIf="isLoading" class="message ira-message">
+        <div class="message-content">
+          <span class="sender">Ira</span>
+          <div class="loading-dots">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Error message -->
+    <div *ngIf="errorMessage" class="error-message">
+      {{ errorMessage }}
+    </div>
+
+    <div class="input-area">
+      <input type="text" 
+             [(ngModel)]="message" 
+             placeholder="Type a message..." 
+             (keypress)="onKeyPress($event)"
+             [disabled]="isLoading" />
+      <button class="mic-btn" (click)="startRecording()" [disabled]="isLoading">
+        <span class="material-symbols-outlined">mic</span>
+      </button>
+      <button class="send-btn" (click)="sendMessage()" [disabled]="isLoading || !message.trim()">
+        <span class="material-symbols-outlined">arrow_forward_ios</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Audio player with status -->
+  <div *ngIf="audioUrl" class="audio-player">
+    <div class="audio-header">
+      <p>🎵 Ira's Voice Response</p>
+      <span class="audio-status">Ready to play</span>
+    </div>
+    <audio [src]="audioUrl" controls preload="auto"></audio>
+    <div class="audio-controls">
+      <button class="play-btn" (click)="playAudioAgain()">▶️ Play Again</button>
+      <button class="stop-btn" (click)="stopAudio()">⏹️ Stop</button>
+    </div>
+  </div>
+</div>
+
+</div>

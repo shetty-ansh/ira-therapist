@@ -1,0 +1,18 @@
+ /* .morning-haze::before {
+      position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+  background-image: 
+    radial-gradient(circle at 50% 100%, rgba(253, 224, 71, 0.4) 0%, transparent 60%),
+    radial-gradient(circle at 50% 100%, rgba(251, 191, 36, 0.4) 0%, transparent 70%),
+    radial-gradient(circle at 50% 100%, rgba(244, 114, 182, 0.5) 0%, transparent 80%);
+} */
+
+#hi{
+    height: 100px;
+    width: 100px;
+    border:  dotted red 5px;
+}
