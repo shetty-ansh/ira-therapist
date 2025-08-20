@@ -8,7 +8,6 @@ A full-stack virtual assistant application that combines Google's Gemini AI for 
 - 🔊 **Text-to-Speech**: ElevenLabs integration for natural voice responses
 - 💬 **Real-time Chat**: Interactive chat interface with message history
 - 🎨 **Modern UI**: Responsive design with beautiful animations
-- 📱 **Mobile Friendly**: Works seamlessly on all devices
 
 ## Tech Stack
 
@@ -207,3 +206,4 @@ For support and questions:
 - [ ] Real-time chat with multiple users
 - [ ] Mobile app development
 - [ ] Advanced audio controls and effects
+
