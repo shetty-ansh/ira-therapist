@@ -4,17 +4,18 @@
   justify-content: center;
   align-items: center;
   width: 100vw;
-  height: calc(100vh - 65px);
+  height: calc(100vh - 100px);
   padding: 0;
   overflow: hidden;
 
-  background-color: #ffffff; /* White base */
+  /* background-color: #ffffff; 
   background-image: 
     radial-gradient(circle at 50% 100%, rgba(253, 224, 71, 0.4) 0%, transparent 60%),
     radial-gradient(circle at 50% 100%, rgba(251, 191, 36, 0.4) 0%, transparent 70%),
     radial-gradient(circle at 50% 100%, rgba(244, 114, 182, 0.5) 0%, transparent 80%);
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: cover; */
+  background-color: transparent;
 }
 
 .ira-character{
@@ -23,22 +24,23 @@
   /* background-color: #007bff; */
 }
 
-#ira-avatar{
-  /* margin-top: 20%;
-  height: 85%; */
-  width: 100%;
-  /* background-color: #6c757d; */
-  /* background-image: url('/iraApp/src/assets/ira-avatar.png'); */
-    /* background-image: url('/assets/ira-avatar.png'); */
-
-}
-
-
 #ira-avatar {
   width: 100%;
+  height: 85%;
   min-height: 240px;
-  background: #6c757d url('/iraApp/src/assets/avatar.png');
-  z-index: 5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  /* border: 2px solid red;  */
+  /* background-color: rgba(255, 0, 0, 0.1);  */
+}
+
+#ira-avatar img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  border-radius: 50%;
 }
 
 
@@ -66,12 +68,13 @@
   align-items: center;
   padding-bottom: 20px;
   margin-bottom: 20px;
-  border-bottom: 2px solid rgba(255, 255, 255, 0.25);
-  backdrop-filter: blur(14px) saturate(180%);
-  background: rgba(255, 255, 255, 0.15);
+  /* border-bottom: 2px solid rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(14px) saturate(180%); */
+  /* background: rgba(255, 255, 255, 0.15); */
+  background-color: transparent;
   border-radius: 16px;
   padding: 12px 18px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  /* box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05); */
 }
 
 .chat-header h2 {
@@ -79,14 +82,20 @@
   color: rgba(20, 20, 20, 0.85);
   font-size: 24px;
   font-weight: 600;
+  align-items: center;
 }
 
 .clear-btn {
-  background: linear-gradient(135deg, #ff6b6b, #ff8787);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #ff1c1c, #ff0000);
   color: white;
   border: none;
-  padding: 8px 16px;
-  border-radius: 12px;
+  height: 45px;
+  width: 45px;
+  padding: 15px;
+  border-radius: 50%;
   cursor: pointer;
   font-size: 14px;
   transition: all 0.3s ease;
@@ -110,7 +119,7 @@
   flex: 1;
   overflow-y: auto;
   padding: 20px 0;
-  max-height: 400px;
+  max-height: 230px;
 }
 
 .message {
@@ -248,7 +257,7 @@
 }
 
 .mic-btn {
-  background: #6c757d;
+  background: #000000;
   color: white;
 }
 
@@ -258,7 +267,7 @@
 }
 
 .send-btn {
-  background: #007bff;
+  background: #000000;
   color: white;
 }
 

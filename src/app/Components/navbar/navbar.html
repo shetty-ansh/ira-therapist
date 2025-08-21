@@ -1,10 +1,54 @@
 <nav class="navbar">
   <div class="nav-container">
-    <div class="nav-brand">
-      <h1>{{ title }}</h1>
-    </div>
+
     <div class="nav-links">
-      <a href="/ira" class="nav-link">Chat</a>
+      <a href="/ira" class="nav-link">ira</a>
     </div>
+
+    <div id="ToggleContainer">
+      <div
+        class="switch-container"
+        [class.switched]="activeIndex > 0"
+      >
+        <div
+          class="switch-slider"
+          [style.transform]="'translateX(' + activeIndex * 103 + '%)'"
+        ></div>
+
+        <div class="switch-options">
+          <div
+            class="switch-option"
+            [class.active]="activeIndex === 0"
+            (click)="setActive(0, $event)"
+            routerLink="/"
+          >
+            Home
+          </div>
+          <div
+            class="switch-option"
+            [class.active]="activeIndex === 1"
+            (click)="setActive(1, $event)"
+            routerLink="/ira"
+          >
+            Ira
+          </div>
+          <div
+            class="switch-option"
+            [class.active]="activeIndex === 2"
+            (click)="setActive(2, $event)"
+          >
+            Settings
+          </div>
+          <div
+            class="switch-option"
+            [class.active]="activeIndex === 3"
+            (click)="setActive(3, $event)"
+          >
+            About
+          </div>
+        </div>
+      </div>
+    </div>
+
   </div>
 </nav>

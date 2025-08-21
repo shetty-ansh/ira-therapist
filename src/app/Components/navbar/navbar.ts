@@ -8,4 +8,13 @@ import { Component } from '@angular/core';
 })
 export class Navbar {
   title = 'Ira - Virtual Assistant';
+
+  activeIndex: number = 0;
+
+setActive(index: number, event: Event) {
+  event.stopPropagation();
+  this.activeIndex = index;
+}
+
+
 }

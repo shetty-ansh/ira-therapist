@@ -8,12 +8,18 @@ import { AppRoutingModule } from './app-routing-module';
 import { App } from './app';
 import { Ira } from './Components/ira/ira';
 import { Navbar } from './Components/navbar/navbar';
+import { Homepage } from './Components/homepage/homepage';
+import { About } from './Components/about/about';
+import { Settings } from './Components/settings/settings';
 
 @NgModule({
   declarations: [
     App,
     Ira,
-    Navbar
+    Navbar,
+    Homepage,
+    About,
+    Settings
   ],
   imports: [
     BrowserModule,

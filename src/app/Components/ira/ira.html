@@ -1,15 +1,15 @@
 <div id="main-container">
     <div class="ira-character">
-  <div id="ira-avatar"></div>
+  <div id="ira-avatar">
+    <img src="assets/ira-sprite.png" alt="Ira Avatar">
+  </div>
 </div>
 
     
 <div class="chat-container">
   <div class="chat-header">
-    <!-- <h2>Chat with Ira</h2> -->
-    <button class="clear-btn" (click)="clearMessages()"><span class="material-symbols-outlined">
-ink_eraser
-</span></button>
+    <h2>What's on your mind?</h2>
+    <button class="clear-btn" (click)="clearMessages()"><span class="material-symbols-outlined">ink_eraser</span></button>
   </div>
 
   <div class="chat-box">
@@ -58,7 +58,7 @@ ink_eraser
   </div>
 
   <!-- Audio player with status -->
-  <div *ngIf="audioUrl" class="audio-player">
+  <!-- <div *ngIf="audioUrl" class="audio-player">
     <div class="audio-header">
       <p>🎵 Ira's Voice Response</p>
       <span class="audio-status">Ready to play</span>
@@ -69,6 +69,6 @@ ink_eraser
       <button class="stop-btn" (click)="stopAudio()">⏹️ Stop</button>
     </div>
   </div>
-</div>
+</div> -->
 
 </div>
