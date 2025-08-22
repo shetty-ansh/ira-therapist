@@ -207,3 +207,9 @@ For support and questions:
 - [ ] Mobile app development
 - [ ] Advanced audio controls and effects
 
+Screenshots - 
+<img width="1919" height="1067" alt="image" src="https://github.com/user-attachments/assets/039dcf7d-d7ff-4aa7-9601-f221bd251150" />
+
+<img width="1919" height="1065" alt="image" src="https://github.com/user-attachments/assets/35250d4b-afcb-4291-80ba-a25d6790bb28" />
+
+
