@@ -119,33 +119,6 @@ Main chat endpoint for sending messages and receiving responses.
   "audio": "base64_encoded_audio_data",
   "timestamp": "2024-01-01T12:00:00.000Z"
 }
-```
-
-### GET `/health`
-Health check endpoint to verify server status.
-
-## Project Structure
-
-```
-iraApp2/
-├── index.js              # Backend server
-├── ira.js               # AI service functions
-├── package.json         # Backend dependencies
-├── .env                 # Environment variables
-├── iraApp/              # Angular frontend
-│   ├── src/
-│   │   ├── app/
-│   │   │   ├── Components/
-│   │   │   │   ├── ira/          # Chat component
-│   │   │   │   └── navbar/       # Navigation component
-│   │   │   ├── services/
-│   │   │   │   └── gemini.ts     # API service
-│   │   │   └── app.ts            # Main app component
-│   │   ├── styles.css            # Global styles
-│   │   └── main.ts               # App bootstrap
-│   └── package.json              # Frontend dependencies
-└── README.md
-```
 
 ## Troubleshooting
 
@@ -186,10 +159,6 @@ NODE_ENV=development
 4. Test thoroughly
 5. Submit a pull request
 
-## License
-
-This project is licensed under the ISC License.
-
 ## Support
 
 For support and questions:
@@ -200,8 +169,6 @@ For support and questions:
 
 ## Future Enhancements
 
-- [ ] Voice recording and speech-to-text
-- [ ] User authentication and chat history
 - [ ] Multiple AI models support
 - [ ] Real-time chat with multiple users
 - [ ] Mobile app development
@@ -210,7 +177,8 @@ For support and questions:
 Screenshots - 
 <img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/8ed39995-9535-4f23-a3a0-96ecaf7bb8f9" />
 
-<img width="1919" height="1065" alt="image" src="https://github.com/user-attachments/assets/35250d4b-afcb-4291-80ba-a25d6790bb28" />
+<img width="1919" height="1057" alt="image" src="https://github.com/user-attachments/assets/263b1b00-11ff-4611-b180-84e668963d59" />
+
 
 
 
