@@ -1,4 +1,4 @@
-# Ira - Virtual Therapist App
+# ira - Virtual Therapist App
 
 A full-stack virtual assistant application that combines Google's Gemini AI for text responses and ElevenLabs for text-to-speech conversion.
 
@@ -178,6 +178,7 @@ Screenshots -
 <img width="1000" height="850" alt="image" src="https://github.com/user-attachments/assets/8ed39995-9535-4f23-a3a0-96ecaf7bb8f9" />
 
 <img width="1000" height="850" alt="image" src="https://github.com/user-attachments/assets/263b1b00-11ff-4611-b180-84e668963d59" />
+
 
 
 
