@@ -175,9 +175,10 @@ For support and questions:
 - [ ] Advanced audio controls and effects
 
 Screenshots - 
-<img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/8ed39995-9535-4f23-a3a0-96ecaf7bb8f9" />
+<img width="1000" height="850" alt="image" src="https://github.com/user-attachments/assets/8ed39995-9535-4f23-a3a0-96ecaf7bb8f9" />
 
-<img width="1919" height="1057" alt="image" src="https://github.com/user-attachments/assets/263b1b00-11ff-4611-b180-84e668963d59" />
+<img width="1000" height="850" alt="image" src="https://github.com/user-attachments/assets/263b1b00-11ff-4611-b180-84e668963d59" />
+
 
 
 
