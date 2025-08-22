@@ -51,12 +51,12 @@ const getSpeech = async (text) => {
     
     console.log('Generating speech for text:', text.substring(0, 100) + '...');
     
-    const audio = await elevenlabs.textToSpeech.convert('JBFqnCBsd6RMkjVDRZzb', {
+    const audio = await elevenlabs.textToSpeech.convert('jsCqWAovK2LkecY7zXl4', {
       text: text,
       modelId: 'eleven_multilingual_v2',
       outputFormat: 'mp3_44100_128',
     });
-    
+    // JBFqnCBsd6RMkjVDRZzb
     console.log('ElevenLabs response type:', typeof audio);
     console.log('ElevenLabs response:', audio);
     
